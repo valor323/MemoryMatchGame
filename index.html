@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <h1>Gladiator Memory Match Game</h1>
+        <!-- <div class="about">
+                <a href="about" data-modal>About
+                <form id="about" class="modal">
+                        <p>This is a memory match game based on the 
+                        movie Gladiator, created by Chase Caine.
+                        Click on the cards and if they match they
+                        will stay faced up, if not they will turn
+                        back over. once you have matched all cards 
+                        you can hit the reset game button and it 
+                        will start a new game for you. Have fun and 
+                        try to keep your accuracy high!</p>
+                </form>
+                </a>
+        </div> -->
+    </header>
+    <div class="stats">
+        <div class="numberOfGames">
+            <div class="games-played">
+                <div class="label">Games Played</div>
+                <div class="value"></div>
+            </div>
+        </div>
+        <div class="numberOfAttempts">
+            <div class="attempts"></div>
+            <div class="label">Attempts</div>
+            <div class="value"></div>
+        </div>
+        <div class="matches">
+                <div class="label">Matches</div>
+                <div class="value"></div>
+        </div>
+        <div class="howAccurate">
+            <div class="accuracy"></div>
+            <div class="label">Acurracy</div>
+            <div class="value"></div>
+        </div>
+        <div class="reset-button">
+        <button class="reset" onclick="reset()">Reset Game</button>
+        </div>
+    </div>
+    <div class="game-area">
+        </div>
+</body>
+</html>
+
+
+
