@@ -1,3 +1,177 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+
+  body{
+      height: 100vh;
+      width: 100vw;
+      background-image: url(./images/coloseum.jpeg);
+      background-size: auto;
+  }
+
+  header{
+      height: 10vh;
+      width: 100%;
+  }
+
+  header > h1{
+      text-align: center;
+      position: relative;
+      font-size: 1.5em;
+      color: crimson;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .about{
+      position: relative;
+      left: 5%;
+  }
+
+  .stats{
+    border: 3px solid black;
+    position: absolute;
+    height: 14vh;
+    width: 90vw;
+    top: 85%;
+    left: 4%;
+  }
+  .numberOfAttempts, .howAccurate, .numberOfGames, .matches{
+      font-family: monospace;
+      font-weight: bold;
+      padding-top: 5%;
+      font-size: 1em;
+      display: inline-block;
+      margin-left: 4vw;
+  }
+  /*color for sidebar
+  */
+  .matches{
+      color: orange;
+      bottom: 5%;
+  }
+
+  .numberOfGames{
+      color: rgb(214, 82, 5);
+      top: 5%;
+  }
+
+  .numberOfAttempts{
+      top:30%;
+      color: firebrick;
+  }
+
+  .howAccurate{
+      color: orangered;
+      top: 20%;
+  }
+  button{
+      width: 35%;
+      height: 4vh;
+      background-color: crimson;
+      font-size: 1em;
+      font-weight: bold;
+  }
+
+  .reset-button{
+      position: relative;
+      top: 13%;
+      left: 29%;
+  }
+
+  .game-area{
+      position: relative;
+      height: 50vh;
+      width: 100vw;
+      display: flex;
+      margin: auto;
+      flex-wrap: wrap;
+      perspective: 1000px;
+
+  }
+
+
+  .game {
+      position: relative;
+      height: 32%;
+      width: 15%;
+      left: 10%;
+      top: 7%;
+      margin: 5px;
+
+  }
+
+  .cardContainer:active{
+      transform: scale(.97);
+      transition: transform .2s;
+  }
+
+  .cardContainer.flip{
+      transform: rotateY(180deg);
+  }
+
+  .cardContainer{
+    transform: scale(1);
+      transform-style: preserve-3d;
+      transition: transform .5s;
+      width: 25%;
+      height: 26%;
+      display: inline-block;
+      position: relative;
+      margin: 2px;
+      left: 11%;
+      bottom: 12%;
+      background-size: cover;
+  }
+
+
+  div.charecter{
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    /* left: 10%;
+    top: 10%;
+    margin: 5px; */
+    background-size: cover;
+    /* transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s; */
+
+
+  }
+
+  div.front{
+
+      position: absolute;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      backface-visibility: hidden;
+  }
+
+  .pic{
+      background-image: url(./images/gladiator.jpg);
+  }
+
+
+  }
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+
 *{
     padding: 0;
     margin: 0;
@@ -86,7 +260,7 @@ button{
     margin: auto;
     flex-wrap: wrap;
     perspective: 1000px;
-   
+
 }
 
 
@@ -94,10 +268,10 @@ button{
     position: relative;
     height: 32%;
     width: 15%;
-    left: 10%; 
+    left: 10%;
     top: 7%;
     margin: 5px;
-  
+
 }
 
 .charecter:active{
@@ -106,24 +280,24 @@ button{
 }
 
 .charecter.flip{
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 
 div.charecter{
-    position: relative;
+    position: absolute;
     display: inline-block;
-    height: 32%;
-    width: 15%;
-    left: 10%;
+    height: 100%;
+    width: 100%;
+    /* left: 10%;
     top: 10%;
-    margin: 5px;
+    margin: 5px; */
     background-size: cover;
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
-    
-   
+
+
 }
 
 div.front{
@@ -139,7 +313,15 @@ div.front{
 .pic{
     background-image: url(./images/gladiator.jpg);
 }
+.cardContainer{
+    width: 30%;
+    height: 28%;
+    display: inline-block;
+    position: relative;
+    margin: 2px;
+    left: 6%;
+    bottom: 12%;
+}
 
 
-
-
+}

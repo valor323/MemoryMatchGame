@@ -3,10 +3,10 @@ $(document).ready(initializeApp)
 function initializeApp(){
     addcards();
     addFront();
-    cards = document.querySelectorAll('.charecter');
+    cards = document.querySelectorAll('.cardContainer');
     cards.forEach(card => card.addEventListener('click',  flipcard));
     shuffle();
-    displayStats(); 
+    displayStats();
     $('.about').on('click', modal);
 }
 var cardsArray = [{
@@ -16,7 +16,7 @@ var cardsArray = [{
 {
     'name': 'gracchus',
     'image': './images/gracchus.jpg'
-}, 
+},
 {
     'name': 'juba',
     'image': './images/juba.jpg',
@@ -52,8 +52,8 @@ function addFront(){
         var newDiv = $('<div>');
         newDiv.addClass('front');
         newDiv.addClass('pic');
-        $('.card').append(newDiv);
-        
+        $('.cardContainer').append(newDiv);
+
     }
 }
 
@@ -64,22 +64,24 @@ game.append(grid);
 var gameGrid = cardsArray.concat(cardsArray);
 gameGrid.forEach(item => {
     // Create a div
+    var cardContainer = $('<div>').addClass('cardContainer');
     var card = $('<div>');
-  
+
     // Apply a card class to that div
     card.addClass('card');
     card.addClass('charecter')
     card.addClass('back');
-  
-    // Set the data-name attribute of the div to the cardsArray name
-    card[0].dataset.name = item.name;
-  
-    // Apply the background image of the div to the cardsArray image
-    card[0].style.backgroundImage = `url(${item.image})`;
 
-  
+    // Set the data-name attribute of the div to the cardsArray name
+    cardContainer[0].dataset.name = item.name;
+
+    // Apply the background image of the div to the cardsArray image
+    cardContainer[0].style.backgroundImage = `url(${item.image})`;
+
+
     // Append the div to the grid section
-    $('.game-area').append(card)
+    cardContainer.append(card)
+    $('.game-area').append(cardContainer)
   });
   gameGrid.sort(() => 0.5 - Math.random());
 }
@@ -147,12 +149,12 @@ function shuffle() {
 
 matches = 0;
 attempts = 0;
-accuracy = null; 
+accuracy = null;
 games_played = 0;
 
 function displayStats(){
     $('.matches .value').text(matches);
-    $('.games-played .value').text(games_played); 
+    $('.games-played .value').text(games_played);
     $('.numberOfAttempts .value').text(attempts);
     accuracy = matches/attempts;
     $('.howAccurate .value').text((accuracy*100).toFixed(0) + '%');
@@ -179,6 +181,3 @@ function reset(){
 // function modal(){
 //     $('.about').modal();
 // }
-
-
- 
