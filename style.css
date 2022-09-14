@@ -724,8 +724,8 @@ button{
 
 .game-area{
     position: relative;
-    height: 80vh;
-    width: 85vw;
+    height: 70vh;
+    width: 79vw;
     display: flex;
     margin: auto;
     flex-wrap: wrap;
@@ -784,13 +784,13 @@ div.front{
     background-image: url(./images/gladiator.jpg);
 }
 .cardContainer{
-    width: 30%;
+    width: 15%;
     height: 28%;
     display: inline-block;
     position: relative;
     margin: 2px;
-    left: 6%;
-    bottom: 12%;
+    left: 13%;
+    top: 17%;
 }
 
 
